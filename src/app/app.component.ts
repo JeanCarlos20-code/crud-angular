@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'crud-usuarios';
+
+  clicouH1() { window.alert('Clicou no H1'); }
 }

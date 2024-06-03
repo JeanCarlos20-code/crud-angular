@@ -1,0 +1,110 @@
+<app-menu></app-menu>
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- LADO ESQUERDO DA TELA -->
+    <div class="col-12 col-lg-9">
+      <!-- PRIMEIRO CARD -->
+      <div class="card-info">
+        <div class="row">
+          <div class="col-12 col-md-8">
+            <h1 class="title">Crud Users</h1>
+            <h3 class="subtitle">Mais eficiência na gestão dos <span>usuários</span> e de seus benefícios.
+              Chega de sistemas antigos e sem usabilidade, agora com o <span>Crud Users</span> seu trabalho fica até 3x
+              mais rápido e simplificado.<br>
+              Confira um resumo das informações em nosso <span>Dashboard</span>
+            </h3>
+
+            <app-button textButton="Iniciar" routerLink="/usuarios"></app-button>
+          </div>
+          <div class="col-12 col-md-4">
+            <img src="../../../assets/dashboard.png" width="100%">
+          </div>
+        </div>
+      </div>
+
+      <!-- PARTE DE BAIXO DA TELA -->
+      <div class="row mt-4">
+        <!-- CARD SPINNER ESQUERDA -->
+        <div class="col-6">
+          <div class="card-info">
+            <div class="row">
+              <div class="col-8">
+                <p class="text-card">Total de usuários cadastrados no sistema</p>
+                <p class="number-card">79</p>
+                <p class="contrast-card">+ 5 adicionados no último mês</p>
+              </div>
+              <div class="col-4">
+                <mat-progress-spinner class="example-margin mx-auto color-spinner" mode="determinate"
+                  value="79"></mat-progress-spinner>
+                <p class="info-spinner">79/150</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD SPINNER DIREITA -->
+        <div class="col-6">
+          <div class="card-info">
+            <div class="row">
+              <div class="col-8">
+                <p class="text-card">Total de benefícios cadastrados</p>
+                <p class="number-card">4</p>
+                <p class="contrast-card">+ 2 adicionados no ultimo mês</p>
+              </div>
+              <div class="col-4">
+                <mat-progress-spinner class="example-margin mx-auto color-spinner" mode="determinate"
+                  value="79"></mat-progress-spinner>
+                <p class="info-spinner">4/5</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CARD USUÁRIO CADASTRADO -->
+        <div class="col-12 mt-4">
+          <div class="card-info">
+            <h3 class="title">Último usuário cadastrado</h3>
+
+            <hr class="hr">
+
+            <div class="row">
+              <div class="col-1"><mat-icon>account-circle</mat-icon> </div>
+              <div class="col-1">
+                <p class="text-p">1</p>
+              </div>
+              <div class="col-1">
+                <p class="text-p">Jean Carlos</p>
+              </div>
+              <div class="col-1">
+                <p class="text-p">Desenvolvedor tentando programar em front</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LADO DIREITO DA TELA -->
+    <div class="col-12 col-lg-3">
+      <div class="card-info">
+        <div class="container-perfil">
+          <img src="../../../assets/img-perfil.jpg" class="img-perfil">
+          <h4>Seja bem vindo</h4>
+          <h5>{{ userName }}</h5>
+          <li> <mat-icon>location_on</mat-icon> SP - Brasil </li>
+        </div>
+
+        <hr class="hr">
+        <p class="text-p">"Já vimos a verdade, e a verdade é o desconhecido, mas o desconhecido não pode ser só a
+          verdade, a verdade é que o desconhecido só pode ser verdadeiro como a verdade do desconhecido pode ser, e essa
+          é a verdade"</p>
+        <hr class="hr">
+
+        <li><mat-icon>person</mat-icon>Gerencie Usuários</li>
+        <li><mat-icon>loyalty</mat-icon>Adicione Benefícios</li>
+        <li><mat-icon>format_list_bulleted</mat-icon>Consulte Cadastros</li>
+        <li><mat-icon>delete</mat-icon>Exclua usuários</li>
+      </div>
+    </div>
+  </div>
+</div>
