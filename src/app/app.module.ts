@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ButtonComponent } from './components/button/button.component';
 import { LoginComponent } from './pages/login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -17,10 +17,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment.development';
 import { CrudComponent } from './pages/crud/crud.component';
+import { ModalViewUserComponent } from './pages/crud/modal-view-user/modal-view-user.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ModalFormUserComponent } from './pages/crud/modal-form-user/modal-form-user.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,9 @@ import { CrudComponent } from './pages/crud/crud.component';
     LoginComponent,
     HomeComponent,
     MenuComponent,
-    CrudComponent
+    CrudComponent,
+    ModalViewUserComponent,
+    ModalFormUserComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,10 @@ import { CrudComponent } from './pages/crud/crud.component';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    MatDialogModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    ReactiveFormsModule,
+    MatSelectModule
   ],
   providers: [
     provideAnimationsAsync(),
